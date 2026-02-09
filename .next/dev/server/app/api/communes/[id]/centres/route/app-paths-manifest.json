@@ -1,0 +1,3 @@
+{
+  "/api/communes/[id]/centres/route": "app/api/communes/[id]/centres/route.js"
+}

@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 46, "column": 0}, "map": {"version":3,"sources":["file:///D:/ELECTION/SiteRAG/presiapp/app/api/auth/logout/route.ts"],"sourcesContent":["import { NextResponse } from \"next/server\"\r\n\r\nexport async function POST() {\r\n  const response = NextResponse.json({ message: \"Logged out\" })\r\n\r\n  // Supprimer cookies côté serveur\r\n  response.cookies.set(\"token\", \"\", {\r\n    path: \"/\",\r\n    expires: new Date(0),\r\n  })\r\n\r\n  response.cookies.set(\"user\", \"\", {\r\n    path: \"/\",\r\n    expires: new Date(0),\r\n  })\r\n\r\n  return response\r\n}\r\n"],"names":[],"mappings":";;;;AAAA;;AAEO,eAAe;IACpB,MAAM,WAAW,gJAAY,CAAC,IAAI,CAAC;QAAE,SAAS;IAAa;IAE3D,iCAAiC;IACjC,SAAS,OAAO,CAAC,GAAG,CAAC,SAAS,IAAI;QAChC,MAAM;QACN,SAAS,IAAI,KAAK;IACpB;IAEA,SAAS,OAAO,CAAC,GAAG,CAAC,QAAQ,IAAI;QAC/B,MAAM;QACN,SAAS,IAAI,KAAK;IACpB;IAEA,OAAO;AACT"}}]
+}

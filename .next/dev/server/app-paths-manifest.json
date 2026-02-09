@@ -1,0 +1,21 @@
+{
+  "/api/auth/login/route": "app/api/auth/login/route.js",
+  "/api/auth/logout/route": "app/api/auth/logout/route.js",
+  "/api/candidates/route": "app/api/candidates/route.js",
+  "/api/centres/[id]/bureaux/route": "app/api/centres/[id]/bureaux/route.js",
+  "/api/communes/[id]/centres/route": "app/api/communes/[id]/centres/route.js",
+  "/api/geo/route": "app/api/geo/route.js",
+  "/api/moughataas/[id]/communes/route": "app/api/moughataas/[id]/communes/route.js",
+  "/api/stats/route": "app/api/stats/route.js",
+  "/api/users/route": "app/api/users/route.js",
+  "/api/users/wilaya/route": "app/api/users/wilaya/route.js",
+  "/api/wilayas/[id]/moughataas/route": "app/api/wilayas/[id]/moughataas/route.js",
+  "/api/wilayas/route": "app/api/wilayas/route.js",
+  "/dashboard/locations/page": "app/dashboard/locations/page.js",
+  "/dashboard/page": "app/dashboard/page.js",
+  "/dashboard/reports/page": "app/dashboard/reports/page.js",
+  "/dashboard/results/page": "app/dashboard/results/page.js",
+  "/dashboard/users/page": "app/dashboard/users/page.js",
+  "/login/page": "app/login/page.js",
+  "/page": "app/page.js"
+}
