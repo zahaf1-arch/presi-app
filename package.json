@@ -1,6 +1,6 @@
 {
-  "name": "my-v0-project",
-  "version": "0.1.0",
+  "name": "presiappt",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "build": "next build",
@@ -11,6 +11,7 @@
   "prisma": {
     "seed": "ts-node prisma/seed.ts"
   },
+
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",
     "@prisma/client": "^6.19.0",
@@ -83,4 +84,5 @@
     "tw-animate-css": "1.3.3",
     "typescript": "^5"
   }
+
 }

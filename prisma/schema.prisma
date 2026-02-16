@@ -3,7 +3,7 @@ generator client {
 }
 
 datasource db {
-  provider = "mysql"
+  provider = "postgresql"
   url      = env("DATABASE_URL")
 }
 
@@ -11,7 +11,7 @@ model Wilaya {
   id         Int         @id @default(autoincrement())
   nom_fr     String      @db.VarChar(100)
   nom_ar     String      @db.VarChar(100)
-  code       String?     @unique(map: "code") @db.VarChar(10)
+  code       String?     @unique(map: "wilaya_code") @db.VarChar(10)
   createdAt  DateTime    @default(now()) @map("created_at") @db.Timestamp(0)
   updatedAt  DateTime    @default(now()) @updatedAt @map("updated_at") @db.Timestamp(0)
   moughataas Moughataa[]
@@ -24,7 +24,7 @@ model Moughataa {
   id        Int       @id @default(autoincrement())
   nom_fr    String    @db.VarChar(100)
   nom_ar    String    @db.VarChar(100)
-  code      String?   @unique(map: "code") @db.VarChar(10)
+  code      String?   @unique(map: "moughataa_code") @db.VarChar(10)
   wilayaId  Int       @map("wilaya_id")
   createdAt DateTime  @default(now()) @map("created_at") @db.Timestamp(0)
   updatedAt DateTime  @default(now()) @updatedAt @map("updated_at") @db.Timestamp(0)
@@ -39,7 +39,7 @@ model Commune {
   id          Int       @id @default(autoincrement())
   nom_fr      String    @db.VarChar(100)
   nom_ar      String    @db.VarChar(100)
-  code        String?   @unique(map: "code") @db.VarChar(10)
+  code        String?   @unique(map: "commune_code") @db.VarChar(10)
   moughataaId Int       @map("moughataa_id")
   createdAt   DateTime  @default(now()) @map("created_at") @db.Timestamp(0)
   updatedAt   DateTime  @default(now()) @updatedAt @map("updated_at") @db.Timestamp(0)
@@ -54,7 +54,7 @@ model Centre {
   id        Int      @id @default(autoincrement())
   nom_fr    String   @db.VarChar(100)
   nom_ar    String   @db.VarChar(100)
-  code      String?  @unique(map: "code") @db.VarChar(10)
+  code      String?  @unique(map: "centre_code") @db.VarChar(10)
   communeId Int      @map("commune_id")
   createdAt DateTime @default(now()) @map("created_at") @db.Timestamp(0)
   updatedAt DateTime @default(now()) @updatedAt @map("updated_at") @db.Timestamp(0)
